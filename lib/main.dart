@@ -130,7 +130,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
     final asStr = value.toString();
     if (asStr.contains('e')) return value.toStringAsPrecision(10);
     if (asStr.endsWith('.0')) return asStr.substring(0, asStr.length - 2);
-    return value.toStringAsPrecision(12).replaceAll(RegExp(r'\.0+\$'), '');
+    return value.toStringAsPrecision(12).replaceAll(RegExp(r'\.0+$'), '');
   }
 
   @override
